@@ -1,0 +1,37 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    connection_pool (2.3.0)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.8)
+    pg (1.4.5)
+    puma (6.0.2)
+      nio4r (~> 2.0)
+    rack (2.2.6)
+    rack-protection (3.0.5)
+      rack
+    redis (5.0.6)
+      redis-client (>= 0.9.0)
+    redis-client (0.12.1)
+      connection_pool
+    ruby2_keywords (0.0.5)
+    sinatra (3.0.5)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.5)
+      tilt (~> 2.0)
+    tilt (2.0.11)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  pg
+  puma
+  rack
+  redis
+  sinatra
+
+BUNDLED WITH
+   2.3.26

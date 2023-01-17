@@ -1,0 +1,42 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            3000
+
+Document Path:          /bank/report.json
+Document Length:        222173 bytes
+
+Concurrency Level:      10
+Time taken for tests:   110.398 seconds
+Complete requests:      30
+Failed requests:        0
+Total transferred:      6668430 bytes
+HTML transferred:       6665190 bytes
+Requests per second:    0.27 [#/sec] (mean)
+Time per request:       36799.499 [ms] (mean)
+Time per request:       3679.950 [ms] (mean, across all concurrent requests)
+Transfer rate:          58.99 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   1.2      0       7
+Processing:  7240 31578 9059.7  35249   49676
+Waiting:     7237 31532 9054.0  35081   49663
+Total:       7240 31579 9059.7  35249   49676
+
+Percentage of the requests served within a certain time (ms)
+  50%  35249
+  66%  35347
+  75%  35446
+  80%  35581
+  90%  35733
+  95%  35883
+  98%  49676
+  99%  49676
+ 100%  49676 (longest request)

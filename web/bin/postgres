@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker compose \
+  run \
+  --name postgres \
+  --rm \
+  --service-ports \
+  postgres

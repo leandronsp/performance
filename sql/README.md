@@ -1,0 +1,5 @@
+# SQL
+
+```
+bash bin/postgres
+```
