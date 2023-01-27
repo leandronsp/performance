@@ -1,11 +1,77 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    async (2.3.1)
+      console (~> 1.10)
+      io-event (~> 1.1)
+      timers (~> 4.1)
+    async-container (0.16.12)
+      async
+      async-io
+    async-http (0.59.4)
+      async (>= 1.25)
+      async-io (>= 1.28)
+      async-pool (>= 0.2)
+      protocol-http (~> 0.23.1)
+      protocol-http1 (~> 0.14.0)
+      protocol-http2 (~> 0.14.0)
+      traces (>= 0.8.0)
+    async-http-cache (0.4.3)
+      async-http (~> 0.56)
+    async-io (1.34.1)
+      async
+    async-pool (0.3.12)
+      async (>= 1.25)
+    build-environment (1.13.0)
     connection_pool (2.3.0)
+    console (1.16.2)
+      fiber-local
+    ddtrace (1.8.0)
+      debase-ruby_core_source (>= 0.10.16, <= 0.10.18)
+      libdatadog (~> 0.9.0.1.0)
+      libddwaf (~> 1.5.1.0.0)
+      msgpack
+    debase-ruby_core_source (0.10.18)
+    falcon (0.42.3)
+      async
+      async-container (~> 0.16.0)
+      async-http (~> 0.57)
+      async-http-cache (~> 0.4.0)
+      async-io (~> 1.22)
+      build-environment (~> 1.13)
+      bundler
+      localhost (~> 1.1)
+      openssl (~> 3.0)
+      process-metrics (~> 0.2.0)
+      protocol-rack (~> 0.1)
+      samovar (~> 2.1)
+    ffi (1.15.5)
+    fiber-local (1.0.0)
+    io-event (1.1.6)
+    libdatadog (0.9.0.1.0-x86_64-linux)
+    libddwaf (1.5.1.0.0-x86_64-linux)
+      ffi (~> 1.0)
+    localhost (1.1.9)
+    mapping (1.1.1)
+    msgpack (1.6.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
+    openssl (3.1.0)
     pg (1.4.5)
+    process-metrics (0.2.1)
+      console (~> 1.8)
+      samovar (~> 2.1)
+    protocol-hpack (1.4.2)
+    protocol-http (0.23.12)
+    protocol-http1 (0.14.6)
+      protocol-http (~> 0.22)
+    protocol-http2 (0.14.2)
+      protocol-hpack (~> 1.4)
+      protocol-http (~> 0.18)
+    protocol-rack (0.2.4)
+      protocol-http (~> 0.23)
+      rack (>= 1.0)
     puma (6.0.2)
       nio4r (~> 2.0)
     rack (2.2.6)
@@ -16,17 +82,24 @@ GEM
     redis-client (0.12.1)
       connection_pool
     ruby2_keywords (0.0.5)
+    samovar (2.1.4)
+      console (~> 1.0)
+      mapping (~> 1.0)
     sinatra (3.0.5)
       mustermann (~> 3.0)
       rack (~> 2.2, >= 2.2.4)
       rack-protection (= 3.0.5)
       tilt (~> 2.0)
     tilt (2.0.11)
+    timers (4.3.5)
+    traces (0.8.0)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  ddtrace
+  falcon
   pg
   puma
   rack
